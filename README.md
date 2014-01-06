@@ -8,3 +8,15 @@ It then looks up a flag for this country in a 16x16 texture atlas, returning the
 
 To do this it has access to an internal database of IP ranges, so no online network access is required to use this.
 
+Output:
+```
+$ make
+cc -c -Wall ip2ensign.c
+cc -o tst-ip2ensign tst-ip2ensign.c ip2ensign.o
+./tst-ip2ensign
+www.stolk.org is in us and has UV=0.093750,0.906250
+www.rogers.ca is in ca and has UV=0.281250,0.156250
+www.ferrari.it is in it and has UV=0.656250,0.406250
+www.shell.com is in us and has UV=0.093750,0.906250
+www.bbc.co.uk is in uk and has UV=0.031250,0.906250
+```
