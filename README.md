@@ -21,6 +21,10 @@ www.bbc.co.uk is in uk and has UV=0.031250,0.906250
 ```
 
 ![Screenshot](/art/flagatlas.png)
+The texture atlas with flag images.
+
+![Screenshot](/screenshot/US-versus-CA.png)
+Example use of ip2ensign in an online game.
 
 ##TODO
 * Only tested on LSB architecture. May not work on MSB.
