@@ -20,3 +20,6 @@ www.ferrari.it is in it and has UV=0.656250,0.406250
 www.shell.com is in us and has UV=0.093750,0.906250
 www.bbc.co.uk is in uk and has UV=0.031250,0.906250
 ```
+
+![Screenshot](/art/flagatlas.png)
+
