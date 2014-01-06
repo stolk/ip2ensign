@@ -4,8 +4,10 @@
 
 #include <sys/types.h>
 #include <sys/socket.h>
+#include <netdb.h>
 #include <stdio.h>
 #include <string.h>
+#include <assert.h>
 
 const char* ip2ensign( unsigned int addr, float* u, float* v )
 {
@@ -28,5 +30,16 @@ const char* ip2ensign( unsigned int addr, float* u, float* v )
 	*v = ( 0.5f + y ) / 16.0f;
 
 	return cc;
+}
+
+
+const char* host2ensign( const char* host, float* u, float* v )
+{
+	struct hostent *he = gethostbyname( host );
+	if ( !he ) perror( "gethostbyname" );
+	assert( he );
+	struct in_addr ip_addr = *(struct in_addr *)(he->h_addr);
+	unsigned long a = ntohl( ip_addr.s_addr );
+	return ip2ensign( a, u, v );
 }
 
