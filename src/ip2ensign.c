@@ -27,8 +27,8 @@ const char* ip2ensign( unsigned int addr, float* u, float* v )
 			break;
 	int x = i%16;
 	int y = i/16;
-	*u = ( 0.5f + x ) / 16.0f;
-	*v = ( 0.5f + y ) / 16.0f;
+	*u =     x  / 16.0f + 0.5f/512;
+	*v = (15-y) / 16.0f + 0.5f/512;
 
 	return cc;
 }

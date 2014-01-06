@@ -24,6 +24,5 @@ www.bbc.co.uk is in uk and has UV=0.031250,0.906250
 
 ##TODO
 * Only tested on LSB architecture. May not work on MSB.
-* Should maybe return four UV coordinates, not just one? For now, opposite corner is at +1/32, +1/32.
-* V might need to be flipped?
+* Should maybe return four UV coordinates, not just one? For now, opposite corner is at +1/16, +1/16.
 
