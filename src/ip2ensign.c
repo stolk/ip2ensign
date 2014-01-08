@@ -41,6 +41,7 @@ const char* ip2ensign( unsigned int addr, float* u, float* v )
 	cc[1] = cctable[nr*2+1];
 	cc[2] = 0;
 	const int substituted = cc2ensign( cc, u, v );
+	(void) substituted;
 	return cc;
 }
 
@@ -54,7 +55,6 @@ const char* host2ensign( const char* host, float* u, float* v )
 	assert( he );
 	struct in_addr ip_addr = *(struct in_addr *)(he->h_addr);
 	unsigned long a = ntohl( ip_addr.s_addr );
-	printf( "Looking up %d", a );
 	return ip2ensign( a, u, v );
 }
 
