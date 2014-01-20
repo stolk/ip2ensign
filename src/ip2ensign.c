@@ -53,7 +53,7 @@ const char* host2ensign( const char* host, float* u, float* v )
 	struct hostent *he = gethostbyname( host );
 	if ( !he ) perror( "gethostbyname" );
 	assert( he );
-	struct in_addr ip_addr = *(struct in_addr *)(he->h_addr);
+	struct in_addr ip_addr = *(struct in_addr *)(he->h_addr_list[0]);
 	unsigned long a = ntohl( ip_addr.s_addr );
 	return ip2ensign( a, u, v );
 }
