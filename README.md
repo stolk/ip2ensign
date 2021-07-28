@@ -1,4 +1,4 @@
-#ip2ensign
+# ip2ensign
 
 Converts an IP number to a flag image in a texture atlas.
 
@@ -28,7 +28,7 @@ The texture atlas with flag images.
 <br>
 Example use of ip2ensign in an online game.
 
-##TODO
+## TODO
 * Only tested on LSB architecture. May not work on MSB.
 * Should maybe return four UV coordinates, not just one? For now, opposite corner is at +1/16, +1/16.
 
